@@ -1,28 +1,17 @@
 import { StrictMode, Suspense } from 'react';
-import './styles.css';
-import { ClientComponent } from './client-component';
 
 export default function App() {
 	console.log('App Rendered');
 
 	return (
 		<StrictMode>
-			<strong>HELLO FROM THE SERVER</strong>
-			<button onClick={() => console.log('foo!')}>
-				FOO
-			</button>
+			<strong>HELLO FROM THE SERVER!</strong>
 			<Suspense fallback={<div>Loading 1</div>}>
-				<Sleep time={5_000} />
+				<Sleep time={3_000} />
 			</Suspense>
 			<Suspense fallback={<div>Loading 2</div>}>
-				<Sleep time={2_000} />
+				<Sleep time={1_000} />
 			</Suspense>
-			<Suspense fallback={<div>Loading 3</div>}>
-				<Sleep time={10_000} />
-			</Suspense>
-			<ClientComponent>
-				<strong>Some child from a server component</strong>
-			</ClientComponent>
 		</StrictMode>
 	);
 }

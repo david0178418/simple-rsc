@@ -1,5 +1,7 @@
 "use client";
 
+// Still need to figure out interactive components
+
 import type { ReactNode } from "react";
 
 interface Props {
@@ -7,14 +9,11 @@ interface Props {
 }
 
 export function ClientComponent({children}: Props) {
-	console.log('ClientComponent Rendered');
+	console.log('ClientComponent Rendered - Still figuring out this side');
 	return (
 		<div>
 			<button onClick={() => console.log("client component")}>
 				Client Component Log
-			</button>
-			<button onClick={() => fetch('/some-endpoint')}>
-				Client Component Fetch
 			</button>
 			<p>
 				{children}

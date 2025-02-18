@@ -2,6 +2,9 @@
   "name": "bun-test",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun run --hot src/server.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
